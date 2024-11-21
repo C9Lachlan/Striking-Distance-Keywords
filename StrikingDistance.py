@@ -86,8 +86,8 @@ if file1 and file2 and file3:
                 st.write(f"After exclusion, {filtered_df.shape[0]} keywords remain.")
 
             # Handle missing values by replacing them with 0 or 1 as appropriate
-            filtered_df['Volume'] = filtered_df['Volume'].fillna(0)
-            filtered_df['Difficulty'] = filtered_df['Difficulty'].fillna(1)
+            filtered_df['Volume'] = filtered_df['Volume'].fillna(1)
+            filtered_df['Difficulty'] = filtered_df['Difficulty'].fillna(0)
             
             # Calculate Opportunity Score
             filtered_df['Opportunity Score'] = (100 - filtered_df['Difficulty']) * filtered_df['Volume']
